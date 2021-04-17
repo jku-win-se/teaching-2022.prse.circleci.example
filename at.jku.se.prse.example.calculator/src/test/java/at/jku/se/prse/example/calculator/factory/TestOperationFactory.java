@@ -8,7 +8,11 @@ import at.jku.se.prse.example.calculator.factory.ICalculationOperation;
 import at.jku.se.prse.example.calculator.factory.OperationFactory;
 import at.jku.se.prse.example.calculator.operators.AddOperation;
 
-
+/**
+ * This test class performs tests for the {@link OperationFactory} class.
+ * 
+ * @author Michael Vierhauser
+ */
 public class TestOperationFactory {
 
 	/**
