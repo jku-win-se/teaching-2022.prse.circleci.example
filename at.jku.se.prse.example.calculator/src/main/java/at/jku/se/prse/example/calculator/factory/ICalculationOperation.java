@@ -5,7 +5,6 @@ package at.jku.se.prse.example.calculator.factory;
  * Each Operation provided by the {@link OperationFactory} has to implement this
  * interface.
  * 
- * @author Michael Vierhauser
  */
 public interface ICalculationOperation {
 

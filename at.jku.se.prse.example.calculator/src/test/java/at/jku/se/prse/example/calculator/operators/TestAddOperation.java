@@ -10,7 +10,7 @@ import at.jku.se.prse.example.calculator.operators.AddOperation;
 /**
  * This test class performs tests for the {@link AddOperation} class.
  * 
- * @author Michael Vierhauser
+ *
  */
 public class TestAddOperation {
 
