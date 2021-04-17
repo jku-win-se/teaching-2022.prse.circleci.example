@@ -18,7 +18,6 @@ public class TestOperationFactory {
 	 * This test case tests the getOperation Method of the OperationFactory. A
 	 * method is requested for the add operation and the respective implementation
 	 * should be returned.
-	 * 
 	 */
 	@org.junit.Test
 	public void testAdditionOperation() {
