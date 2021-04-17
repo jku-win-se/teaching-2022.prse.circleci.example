@@ -1,9 +1,21 @@
-version: 2.1
+version: 2
+jobs:
+  build:
+    
+    working_directory: ~/test
 
-orbs:
-  maven: circleci/maven@1.1
+    docker:
+      - image: circleci/openjdk:8-jdk-browsers
 
-workflows:
-  maven_test:
-    jobs:
-      - maven/test
+    steps:
+
+      - checkout
+      
+      - run: mvn package
+      - run: mvn test
+      
+      - store_test_results:
+          path: /home/circleci/test/at.jku.se.prse.example.calculator/target/surefire-reports
+          
+      - store_artifacts:
+          path: /home/circleci/test/at.jku.se.prse.example.calculator/target 
