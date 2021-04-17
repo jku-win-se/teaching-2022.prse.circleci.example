@@ -11,12 +11,8 @@ jobs:
 
       - checkout
       
-      - run: mvn package
-      - run: mvn test
+      - run: mvn clean verify    
       
-      - store_test_results:
-          path: /home/circleci/test/at.jku.se.prse.example.calculator/target/surefire-reports
-          
       - store_artifacts:
           path: ~/at.jku.se.prse.example.calculator/target 
       
