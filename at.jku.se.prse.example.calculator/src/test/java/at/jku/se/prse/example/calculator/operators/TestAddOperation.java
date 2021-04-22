@@ -29,7 +29,7 @@ public class TestAddOperation {
 	@org.junit.Test
 	public void testCalculate() {
 
-		String result = add.caclulate("3+3");
+		String result = add.caclulate("3+4");
 		assertEquals(Integer.parseInt(result), 6);
 	}
 
