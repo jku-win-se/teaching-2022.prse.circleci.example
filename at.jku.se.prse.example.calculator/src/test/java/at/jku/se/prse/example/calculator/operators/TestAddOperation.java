@@ -30,7 +30,7 @@ public class TestAddOperation {
 	public void testCalculate() {
 
 		String result = add.caclulate("3+3");
-		assertEquals(Integer.parseInt(result), 7);
+		assertEquals(Integer.parseInt(result), 6);
 	}
 
 	/**
