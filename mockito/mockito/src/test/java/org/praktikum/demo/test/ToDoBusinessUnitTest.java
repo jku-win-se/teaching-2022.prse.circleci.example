@@ -7,7 +7,7 @@ import static org.mockito.Mockito.when;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.praktikum.demo.ToDoBusiness;
 import org.praktikum.demo.ToDoService;
 
