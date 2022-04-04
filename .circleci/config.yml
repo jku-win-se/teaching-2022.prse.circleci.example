@@ -5,7 +5,7 @@ jobs:
     working_directory: ~/at.jku.se.prse.example.calculator
 
     docker:
-      - image: circleci/openjdk:8-jdk-browsers
+      - image: circleci/openjdk:16-jdk-browsers
 
     steps:
 
