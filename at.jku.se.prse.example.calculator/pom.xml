@@ -7,18 +7,16 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>16</maven.compiler.target>
+		<maven.compiler.source>16</maven.compiler.source>
 	</properties>
 
 	<build>
 		<plugins>
-
-
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
-				<version>1.6.0</version>
+				<version>3.0.0</version>
 				<executions>
 					<execution>
 						<goals>
@@ -27,9 +25,50 @@
 					</execution>
 				</executions>
 				<configuration>
-					<mainClass>at.jku.se.prse.example.calculator.SimpleCalculator</mainClass>
+						<mainClass>at.jku.se.prse.example.calculator.SimpleCalculator</mainClass>
 				</configuration>
+			</plugin>			
+			
+		<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.7</version>
+				<executions>
+				       <execution>
+				           <goals>
+				               <goal>prepare-agent</goal>
+				           </goals>
+				       </execution>
+				       <execution>
+				           <id>report</id>
+				           <phase>prepare-package</phase>
+				           <goals>
+				               <goal>report</goal>
+				           </goals>
+				       </execution>
+						<execution>
+						    <id>jacoco-check</id>
+						    <goals>
+						        <goal>check</goal>
+						    </goals>
+						    <configuration>
+						        <rules>
+						            <rule>
+						                <element>PACKAGE</element>
+						                <limits>
+						                    <limit>
+						                        <counter>LINE</counter>
+						                        <value>COVEREDRATIO</value>
+						                        <minimum>0.08</minimum>
+						                    </limit>
+						                </limits>
+						            </rule>
+						        </rules>
+						    </configuration>
+						</execution>
+				</executions>
 			</plugin>
+							
 		</plugins>
 
 	</build>
